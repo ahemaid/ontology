@@ -1,0 +1,636 @@
+@prefix : <http://openenergy-platform.org/ontology/oeo/imports/ro-module.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@base <http://openenergy-platform.org/ontology/oeo/imports/ro-module.owl> .
+
+<http://openenergy-platform.org/ontology/oeo/imports/ro-module.owl> rdf:type owl:Ontology ;
+                                                                     owl:versionIRI <http://openenergy-platform.org/ontology/oeo/dev/imports/ro-module.owl> ;
+                                                                     rdfs:comment "This file contains externally imported content from the Relations Ontology (RO) for import into the Open Energy Ontology (OEO). It is automatically extracted using ROBOT from the term list ro-terms.txt."^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000111
+obo:IAO_0000111 rdf:type owl:AnnotationProperty ;
+                rdfs:label "editor preferred term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                rdfs:label "example of usage"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000114
+obo:IAO_0000114 rdf:type owl:AnnotationProperty ;
+                rdfs:label "has curation status"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                rdfs:label "definition"@en ,
+                           "definition"^^xsd:string .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                rdfs:label "editor note"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000117
+obo:IAO_0000117 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                rdfs:label "term editor"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000118
+obo:IAO_0000118 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000114 obo:IAO_0000125 ;
+                rdfs:label "alternative term"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                rdfs:label "definition source"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000232
+obo:IAO_0000232 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                rdfs:label "curator note"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001900
+obo:RO_0001900 rdf:type owl:AnnotationProperty ;
+               obo:IAO_0000115 "An assertion that holds between an OWL Object Property and a temporal interpretation that elucidates how OWL Class Axioms that use this property are to be interpreted in a temporal context." ;
+               rdfs:label "temporal interpretation"@en ;
+               foaf:page "https://github.com/oborel/obo-relations/wiki/ROAndTime"^^xsd:anyURI .
+
+
+###  http://purl.obolibrary.org/obo/RO_0040042
+obo:RO_0040042 rdf:type owl:AnnotationProperty ;
+               obo:IAO_0000112 "part-of is homeomorphic for independent continuants." ;
+               obo:IAO_0000115 "R is homemorphic for C iff (1) there exists some x,y such that x R y, and x and y instantiate C and (2) for all x, if x is an instance of C, and there exists some y some such that x R y, then it follows that y is an instance of C." ;
+               oboInOwl:created_by "cjm"^^xsd:string ;
+               oboInOwl:creation_date "2018-10-21T19:46:34Z"^^xsd:dateTime ;
+               rdfs:comment "R homeomorphic-for C expands to: C SubClassOf R only C. Additionally, for any class D that is disjoint with C, we can also expand to C DisjointWith R some D, D DisjointWith R some C." ;
+               rdfs:label "is homeomorphic for" ;
+               rdfs:seeAlso <https://github.com/oborel/obo-relations/issues/164> .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+terms:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#created_by
+oboInOwl:created_by rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#creation_date
+oboInOwl:creation_date rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasDbXref
+oboInOwl:hasDbXref rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#inSubset
+oboInOwl:inSubset rdf:type owl:AnnotationProperty ;
+                  rdfs:label "in_subset"^^xsd:string .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#seeAlso
+rdfs:seeAlso rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/page
+foaf:page rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+obo:BFO_0000050 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                obo:IAO_0000111 "is part of"@en ;
+                obo:IAO_0000112 "my brain is part of my body (continuant parthood, two material entities)"@en ,
+                                "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en ,
+                                "this day is part of this year (occurrent parthood)"@en ;
+                obo:IAO_0000115 "a core relation that holds between a part and its whole"@en ;
+                obo:IAO_0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en ,
+                                "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en ,
+                                """Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
+
+A continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."""@en ;
+                obo:IAO_0000118 "part_of"@en ;
+                obo:RO_0001900 obo:RO_0001901 ;
+                obo:RO_0040042 obo:BFO_0000002 ,
+                               obo:BFO_0000003 ,
+                               obo:BFO_0000004 ,
+                               obo:BFO_0000017 ,
+                               obo:BFO_0000019 ,
+                               obo:BFO_0000020 ,
+                               obo:BFO_0000031 ;
+                rdfs:label "part of"@en ;
+                rdfs:seeAlso <http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections> ,
+                             <http://ontologydesignpatterns.org/wiki/Submissions:PartOf> ,
+                             "http://www.obofoundry.org/ro/#OBO_REL:part_of" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                obo:IAO_0000111 "has part"@en ;
+                obo:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en ,
+                                "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en ,
+                                "this year has part this day (occurrent parthood)"@en ;
+                obo:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
+                obo:IAO_0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en ,
+                                "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en ,
+                                """Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
+                obo:IAO_0000118 "has_part"@en ;
+                obo:RO_0001900 obo:RO_0001901 ;
+                rdfs:label "has part"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000062
+obo:BFO_0000062 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0002086 ;
+                obo:IAO_0000111 "preceded by"@en ;
+                obo:IAO_0000115 "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."@en ;
+                obo:IAO_0000116 "An example is: translation preceded_by transcription; aging preceded_by development (not however death preceded_by aging). Where derives_from links classes of continuants, preceded_by links classes of processes. Clearly, however, these two relations are not independent of each other. Thus if cells of type C1 derive_from cells of type C, then any cell division involving an instance of C1 in a given lineage is preceded_by cellular processes involving an instance of C.    The assertion P preceded_by P1 tells us something about Ps in general: that is, it tells us something about what happened earlier, given what we know about what happened later. Thus it does not provide information pointing in the opposite direction, concerning instances of P1 in general; that is, that each is such as to be succeeded by some instance of P. Note that an assertion to the effect that P preceded_by P1 is rather weak; it tells us little about the relations between the underlying instances in virtue of which the preceded_by relation obtains. Typically we will be interested in stronger relations, for example in the relation immediately_preceded_by, or in relations which combine preceded_by with a condition to the effect that the corresponding instances of P and P1 share participants, or that their participants are connected by relations of derivation, or (as a first step along the road to a treatment of causality) that the one process in some way affects (for example, initiates or regulates) the other."@en ;
+                obo:IAO_0000118 "is preceded by"@en ,
+                                "preceded_by"@en ;
+                dc:source "http://www.obofoundry.org/ro/#OBO_REL:preceded_by" ;
+                oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+                rdfs:label "preceded by"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000063
+obo:BFO_0000063 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0002222 ;
+                obo:IAO_0000111 "precedes"@en ;
+                obo:IAO_0000115 "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."@en ;
+                oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+                rdfs:label "precedes"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+obo:RO_0000053 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000111 "bearer of"@en ;
+               obo:IAO_0000112 "this apple is bearer of this red color"@en ,
+                               "this vase is bearer of this fragility"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
+               obo:IAO_0000118 "bearer_of"@en ,
+                               "is bearer of"@en ;
+               obo:RO_0001900 obo:RO_0001901 ;
+               rdfs:label "bearer of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+obo:RO_0000056 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000111 "participates in"@en ;
+               obo:IAO_0000112 "this blood clot participates in this blood coagulation"@en ,
+                               "this input material (or this output material) participates in this process"@en ,
+                               "this investigator participates in this investigation"@en ;
+               obo:IAO_0000115 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en ;
+               obo:IAO_0000118 "participates_in"@en ;
+               rdfs:label "participates in"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000111 "has participant"@en ;
+               obo:IAO_0000112 "this blood coagulation has participant this blood clot"@en ,
+                               "this investigation has participant this investigator"@en ,
+                               "this process has participant this input material (or this output material)"@en ;
+               obo:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
+               obo:IAO_0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
+               obo:IAO_0000118 "has_participant"@en ;
+               dc:source "http://www.obofoundry.org/ro/#OBO_REL:has_participant" ;
+               rdfs:label "has participant"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000085
+obo:RO_0000085 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
+               obo:IAO_0000118 "has_function"@en ;
+               rdfs:label "has function"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000086
+obo:RO_0000086 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               rdfs:range obo:BFO_0000019 ;
+               obo:IAO_0000112 "this apple has quality this red color"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."@en ;
+               obo:IAO_0000118 "has_quality"@en ;
+               rdfs:label "has quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+obo:RO_0000087 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
+               obo:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
+               obo:IAO_0000118 "has_role"@en ;
+               rdfs:label "has role"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000091
+obo:RO_0000091 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000053 ;
+               obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en ;
+               rdfs:label "has disposition"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001015
+obo:RO_0001015 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000111 "is location of"@en ;
+               obo:IAO_0000112 "my head is the location of my brain"@en ,
+                               "this cage is the location of this rat"@en ;
+               obo:IAO_0000115 "a relation between two independent continuants, the location and the target, in which the target is entirely within the location"@en ;
+               obo:IAO_0000116 "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en ;
+               obo:IAO_0000118 "location_of"@en ;
+               obo:RO_0001900 obo:RO_0001901 ;
+               rdfs:label "location of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001025
+obo:RO_0001025 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000111 "located in"@en ;
+               obo:IAO_0000112 "my brain is located in my head"@en ,
+                               "this rat is located in this cage"@en ;
+               obo:IAO_0000115 "a relation between two independent continuants, the target and the location, in which the target is entirely within the location"@en ;
+               obo:IAO_0000116 "Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus"@en ,
+                               "Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime"@en ;
+               obo:IAO_0000118 "located_in"@en ;
+               obo:RO_0001900 obo:RO_0001901 ;
+               dc:source "http://www.obofoundry.org/ro/#OBO_REL:located_in" ;
+               rdfs:label "located in"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002081
+obo:RO_0002081 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002222 ;
+               obo:IAO_0000117 "David Osumi-Sutherland" ;
+               obo:IAO_0000118 "<="@en ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "Primitive instance level timing relation between events" ;
+               rdfs:label "before or simultaneous with"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002082
+obo:RO_0002082 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002081 ;
+               obo:IAO_0000117 "David Osumi-Sutherland" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "t1 simultaneous_with t2 iff:=  t1 before_or_simultaneous_with t2  and not (t1 before t2)"@en ;
+               rdfs:label "simultaneous with"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002083
+obo:RO_0002083 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002081 ;
+               obo:IAO_0000117 "David Osumi-Sutherland" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "t1 before t2 iff:=  t1 before_or_simulataneous_with t2  and not (t1 simultaeous_with t2)"@en ;
+               rdfs:label "before"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002086
+obo:RO_0002086 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002222 ;
+               obo:IAO_0000117 "David Osumi-Sutherland" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)"@en ;
+               rdfs:label "ends after"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002089
+obo:RO_0002089 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002222 ;
+               obo:IAO_0000117 "David Osumi-Sutherland" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "starts before"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002091
+obo:RO_0002091 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002222 ;
+               obo:IAO_0000117 "David Osumi-Sutherland" ;
+               obo:IAO_0000118 "io" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "X starts_during Y iff: (start(Y) before_or_simultaneous_with start(X)) AND (start(X) before_or_simultaneous_with end(Y))"@en ;
+               rdfs:label "starts during"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002092
+obo:RO_0002092 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002091 ,
+                                  obo:RO_0002093 ;
+               obo:IAO_0000117 "David Osumi-Sutherland" ;
+               obo:IAO_0000118 "d" ,
+                               "during" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "X happens_during Y iff: (start(Y) before_or_simultaneous_with start(X)) AND (end(X) before_or_simultaneous_with end(Y))"@en ;
+               rdfs:label "happens during"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002093
+obo:RO_0002093 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002222 ;
+               obo:IAO_0000117 "David Osumi-Sutherland" ;
+               obo:IAO_0000118 "o" ,
+                               "overlaps" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "X ends_during Y iff: ((start(Y) before_or_simultaneous_with end(X)) AND end(X) before_or_simultaneous_with end(Y). "@en ;
+               rdfs:label "ends during"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002222
+obo:RO_0002222 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000119 <https://en.wikipedia.org/wiki/Allen%27s_interval_algebra> ;
+               obo:IAO_0000232 "Do not use this relation directly. It is ended as a grouping for relations between occurrents involving the relative timing of their starts and ends." ;
+               terms:source "https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1"^^xsd:anyURI ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations." ;
+               rdfs:label "temporally related to"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002223
+obo:RO_0002223 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000115 "inverse of starts with" ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000119 "Allen" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "starts"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002224
+obo:RO_0002224 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000112 "Every insulin receptor signaling pathway starts with the binding of a ligand to the insulin receptor" ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000115 "x starts with y if and only if x has part y and the time point at which x starts is equivalent to the time point at which y starts. Formally: α(y) = α(x) ∧ ω(y) < ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000118 "started by" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "starts with"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002229
+obo:RO_0002229 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000115 "inverse of ends with" ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "ends"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002230
+obo:RO_0002230 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000115 "x ends with y if and only if x has part y and the time point at which x ends is equivalent to the time point at which y ends. Formally: α(y) > α(x) ∧ ω(y) = ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000118 "finished by" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "ends with"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002233
+obo:RO_0002233 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000115 "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p." ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000118 "consumes" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "has input"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002234
+obo:RO_0002234 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000115 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p." ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000118 "produces" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "has output"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002328
+obo:RO_0002328 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000115 "A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities." ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000232 "This is a grouping relation that collects relations used for the purpose of connecting structure and function" ;
+               rdfs:label "functionally related to"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002352
+obo:RO_0002352 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000056 ,
+                                  obo:RO_0002328 ;
+               obo:IAO_0000115 "inverse of has input" ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               oboInOwl:inSubset obo:RO_0002259 ,
+                                 <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "input of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002353
+obo:RO_0002353 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000056 ,
+                                  obo:RO_0002328 ;
+               obo:IAO_0000115 "inverse of has output" ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               oboInOwl:inSubset obo:RO_0002259 ,
+                                 <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "output of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002505
+obo:RO_0002505 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               obo:IAO_0000112 "'lysine biosynthetic process via diaminopimelate' SubClassOf has_intermediate some diaminopimelate" ;
+               obo:IAO_0000115 "p has intermediate c if and only if p has parts p1, p2 and p1 has output c, and p2 has input c" ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000118 "has intermediate product" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "has intermediate" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002615
+obo:RO_0002615 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf obo:RO_0003301 ;
+               rdfs:label "has model" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0003000
+obo:RO_0003000 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000115 "a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix."^^xsd:string ;
+               obo:IAO_0000117 "Melissa Haendel" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:comment "Note that this definition doesn't quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue."^^xsd:string ;
+               rdfs:label "produces"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0003001
+obo:RO_0003001 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000114 obo:IAO_0000125 ;
+               obo:IAO_0000115 "a produced_by b iff some process that occurs_in b has_output a." ;
+               obo:IAO_0000117 "Melissa Haendel" ;
+               oboInOwl:inSubset <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
+               rdfs:label "produced by"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0003301
+obo:RO_0003301 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               obo:IAO_0000115 "A relation between a biological, experimental, or computational artifact and an entity it is used to study, in virtue of its replicating or approximating features of the studied entity." ;
+               obo:IAO_0000117 "Matthew Brush" ;
+               obo:IAO_0000118 "is used to study"@en ;
+               rdfs:comment "The primary use case for this relation was to link a biological model system such as a cell line or model organism to a disease it is used to investigate, in virtue of the model system exhibiting features similar to that of the disease of interest. But the relation is defined more broadly to support other use cases, such as linking genes in which alterations are made to create model systems to the condition the system is used to interrogate, or computational models to real-world phenomena they are defined to simulate." ;
+               rdfs:label "has role in modeling"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0004007
+obo:RO_0004007 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               obo:IAO_0000115 "p 'has primary input ot output' c iff either (a) p 'has primary input' c or (b) p 'has primary output' c." ;
+               oboInOwl:created_by "cjm"^^xsd:string ;
+               oboInOwl:creation_date "2018-12-13T11:26:17Z"^^xsd:dateTime ;
+               rdfs:label "has primary input or output" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0004008
+obo:RO_0004008 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002234 ,
+                                  obo:RO_0004007 ;
+               obo:IAO_0000115 "p has primary output c if (a) p has output c and (b) the goal of process is to modify, produce, or transform c." ;
+               oboInOwl:created_by "cjm"^^xsd:string ;
+               oboInOwl:creation_date "2018-12-13T11:26:32Z"^^xsd:dateTime ;
+               rdfs:label "has primary output" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:RO_0004008 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "p has primary output c if (a) p has output c and (b) the goal of process is to modify, produce, or transform c." ;
+   oboInOwl:hasDbXref "GOC:cjm" ,
+                      "GOC:dph" ,
+                      "GOC:kva" ,
+                      "GOC:pt" ;
+   rdfs:comment "PMID:27812932"
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/RO_0004009
+obo:RO_0004009 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0002233 ,
+                                  obo:RO_0004007 ;
+               obo:IAO_0000115 "p has primary input c if (a) p has input c and (b) the goal of process is to modify, consume, or transform c." ;
+               oboInOwl:created_by "cjm"^^xsd:string ;
+               oboInOwl:creation_date "2018-12-13T11:26:56Z"^^xsd:dateTime ;
+               rdfs:label "has primary input" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:RO_0004009 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "p has primary input c if (a) p has input c and (b) the goal of process is to modify, consume, or transform c." ;
+   oboInOwl:hasDbXref "GOC:cjm" ,
+                      "GOC:dph" ,
+                      "GOC:kva" ,
+                      "GOC:pt" ;
+   rdfs:comment "PMID:27812932"
+ ] .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000019
+obo:BFO_0000019 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+obo:BFO_0000040 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002577
+obo:RO_0002577 rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000040 ;
+               obo:IAO_0000115 "A material entity consisting of multiple components that are causally integrated." ;
+               obo:IAO_0000116 "May be replaced by a BFO class, as discussed in http://www.jbiomedsem.com/content/4/1/43" ;
+               obo:IAO_0000117 "Chris Mungall" ;
+               obo:IAO_0000119 "http://www.jbiomedsem.com/content/4/1/43" ;
+               rdfs:label "system" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+obo:RO_0002323 obo:IAO_0000232 "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships" ;
+               obo:IAO_0000115 "A mereological relationship or a topological relationship" ;
+               rdfs:label "mereotopologically related to"@en ;
+               obo:RO_0001900 obo:RO_0001901 ;
+               obo:IAO_0000117 "Chris Mungall" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
